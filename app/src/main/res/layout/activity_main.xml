@@ -1,0 +1,69 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/first_number_edit_text"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:hint=""
+        android:inputType="numberDecimal|numberSigned" />
+
+    <EditText
+        android:id="@+id/second_number_edit_text"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/first_number_edit_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:hint=""
+        android:inputType="numberDecimal|numberSigned" />
+
+    <Button
+        android:id="@+id/add_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/second_number_edit_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Сложить" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="118dp"
+        android:layout_height="20dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="8dp"
+        android:layout_toStartOf="@+id/first_number_edit_text"
+        android:accessibilityLiveRegion="none"
+        android:accessibilityTraversalAfter="@id/activity_main"
+        android:breakStrategy="high_quality"
+        android:text="Первоче число" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="118dp"
+        android:layout_height="20dp"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="11dp"
+        android:layout_toStartOf="@+id/first_number_edit_text"
+        android:accessibilityLiveRegion="none"
+        android:accessibilityTraversalAfter="@id/activity_main"
+        android:breakStrategy="high_quality"
+        android:text="Второе число"
+        app:autoSizeTextType="none" />
+
+</RelativeLayout>
