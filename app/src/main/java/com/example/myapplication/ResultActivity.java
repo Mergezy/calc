@@ -6,11 +6,12 @@ import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import java.util.Locale;
+
 public class ResultActivity extends AppCompatActivity {
 
     private TextView resultTextView;
 
-    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,12 +19,14 @@ public class ResultActivity extends AppCompatActivity {
 
         resultTextView = findViewById(R.id.result_text_view);
 
-        double result = getIntent().getDoubleExtra("result", 0);
-        double secondNumber = getIntent().getDoubleExtra("secondNumber", 0);
+        int firstNumber = getIntent().getIntExtra("firstNumber", 0);
+        int secondNumber = getIntent().getIntExtra("secondNumber", 0);
+        int result = firstNumber + secondNumber;
+
         if (secondNumber < 0) {
-            resultTextView.setText(String.format("%.2f + (%.2f) = %.2f", result - secondNumber, secondNumber, result));
+            resultTextView.setText(String.format(Locale.getDefault(), "%d + (%d) = %d", firstNumber, secondNumber, result));
         } else {
-            resultTextView.setText(String.format("%.2f + %.2f = %.2f", result - secondNumber, secondNumber, result));
+            resultTextView.setText(String.format(Locale.getDefault(), "%d + %d = %d", firstNumber, secondNumber, result));
         }
     }
 }

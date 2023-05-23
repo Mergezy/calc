@@ -1,30 +1,53 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#D0D9E2"
     tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/first_number_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="50dp"
+        android:textColor="#000000"
+        android:text="Первое число:"
+        android:textSize="18sp" />
 
     <EditText
         android:id="@+id/first_number_edit_text"
         android:layout_width="150dp"
+        android:textColor="#000000"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="45dp"
+        android:layout_toEndOf="@+id/first_number_label"
         android:hint=""
-        android:inputType="numberDecimal|numberSigned" />
+        android:inputType="numberSigned" />
+
+    <TextView
+        android:id="@+id/second_number_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/first_number_label"
+        android:layout_marginTop="35dp"
+        android:textColor="#000000"
+        android:text="Второе число:"
+        android:textSize="18sp" />
 
     <EditText
         android:id="@+id/second_number_edit_text"
         android:layout_width="150dp"
+        android:textColor="#000000"
         android:layout_height="wrap_content"
-        android:layout_below="@id/first_number_edit_text"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:hint=""
-        android:inputType="numberDecimal|numberSigned" />
+        android:layout_below="@+id/first_number_edit_text"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/second_number_label"
+        android:inputType="numberSigned" />
 
     <Button
         android:id="@+id/add_button"
@@ -32,38 +55,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/second_number_edit_text"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="25dp"
         android:text="Сложить" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="118dp"
-        android:layout_height="20dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="55dp"
-        android:layout_marginEnd="8dp"
-        android:layout_toStartOf="@+id/first_number_edit_text"
-        android:accessibilityLiveRegion="none"
-        android:accessibilityTraversalAfter="@id/activity_main"
-        android:breakStrategy="high_quality"
-        android:text="Первоче число" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="118dp"
-        android:layout_height="20dp"
-        android:layout_below="@+id/textView2"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="11dp"
-        android:layout_toStartOf="@+id/first_number_edit_text"
-        android:accessibilityLiveRegion="none"
-        android:accessibilityTraversalAfter="@id/activity_main"
-        android:breakStrategy="high_quality"
-        android:text="Второе число"
-        app:autoSizeTextType="none" />
 
 </RelativeLayout>
